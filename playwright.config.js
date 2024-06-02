@@ -26,15 +26,15 @@ module.exports = defineConfig({
   use: {
     baseURL: "https://qauto2.forstudy.space/",
     username: "guest",
-    password: "welcome2auto",
+    password: "welcome2qauto",
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },
-  globalSetup: './globalSetup',
-  globalTeardown: './globalTeardown',
+  globalSetup: undefined,
+  globalTeardown: undefined,
   /* Configure projects for major browsers */
   projects: [
     {
@@ -42,15 +42,15 @@ module.exports = defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
+    // {
+    //   name: 'firefox',
+    //   use: { ...devices['Desktop Firefox'] },
+    // },
 
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
+    // {
+    //   name: 'webkit',
+    //   use: { ...devices['Desktop Safari'] },
+    // },
 
     /* Test against mobile viewports. */
     // {
